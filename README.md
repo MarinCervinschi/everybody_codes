@@ -1,4 +1,4 @@
 
 # Everybody Codes - Python Solutions 🐍🐤
 
-This repository contains my Python solutions for the Everybody Codes Advent Calendar coding challenges.
+This repository contains my Python solutions for the [Everybody Codes](https://everybody.codes/) Advent Calendar coding challenges.
