@@ -27,20 +27,30 @@ def part_3(notes):
     pass
 
 
+def get_data(file_path):
+    with open(file_path, "r") as file:
+        notes = [row.strip() for row in file]
+    return notes
+
+
 if __name__ == "__main__":
     from pathlib import Path
 
     PATH = Path(__file__).parent
 
-    with open(PATH / "notes.txt", "r") as file:
-        notes = [row.strip() for row in file]
+    notes = get_data(PATH / "notes1.txt")
+    part_1(notes)
 
-        part_1(notes)
-        part_2(notes)
-        part_3(notes)
+    notes = get_data(PATH / "notes2.txt")
+    part_2(notes)
+
+    notes = get_data(PATH / "notes3.txt")
+    part_3(notes)
 EOF
 
-# Create empty notes.txt
-touch "$QUEST_DIR/notes.txt"
+# Create empty notes files
+touch "$QUEST_DIR/notes1.txt"
+touch "$QUEST_DIR/notes2.txt"
+touch "$QUEST_DIR/notes3.txt"
 
 echo "Created quest_$NEXT_QUEST_FORMATTED in $YEAR_DIR"
